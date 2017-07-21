@@ -5,7 +5,11 @@ pipeline {
       steps {
         echo 'Hello'
         sleep 4
-        input(message: 'Plress enter', ok: 'enter')
+      }
+    }
+    stage('Deploy to prod') {
+      steps {
+        input(message: 'Deploy to prod', ok: 'Deploy')
       }
     }
   }
